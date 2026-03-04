@@ -43,4 +43,4 @@ if submit:
     st.write(
         f"Um Ihr aktuelles Gewicht zu halten, benötigen Sie ungefähr **{maintenance_calories:.0f} kcal/Tag**."
     )
-st. image("https://schweizerbrot.ch/blog/lebensmittelpyramide/wp-content/uploads/2020/09/kalorienbedarf-rechner.png", caption="Ernährungspyramide - Kalorienbedarf Rechner", use_column_width=True)
+st. image("https://de.freepik.com/vektoren-kostenlos/grundnahrungsmittel-in-der-ernaehrungspyramide_7352322.htm", caption="Ernährungspyramide - Kalorienbedarf Rechner", use_column_width=True)

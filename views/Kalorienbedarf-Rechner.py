@@ -43,4 +43,4 @@ if submit:
     st.write(
         f"Um Ihr aktuelles Gewicht zu halten, benötigen Sie ungefähr **{maintenance_calories:.0f} kcal/Tag**."
     )
-st. image("https://de.freepik.com/vektoren-kostenlos/grundnahrungsmittel-in-der-ernaehrungspyramide_7352322.htm", caption="Ernährungspyramide - Kalorienbedarf Rechner", use_column_width=True)
+st. image("https://freedesignfile.com/wp-content/uploads/825677-food-pyramid-a-guide-to-balanced-nutrition-png.", caption="Ernährungspyramide - Kalorienbedarf Rechner", use_column_width=True)

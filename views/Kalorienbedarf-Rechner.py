@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("Kalorienbedarf Rechner")
 
-st.write("Unser Rechner für den täglichen Kalorienbedarf.")
+st.write("Ihr Rechner für den täglichen Kalorienbedarf.")
 
 with st.form(key="calorie_form"):
     age = st.number_input("Alter (Jahre)", min_value=0, max_value=120, value=25)
@@ -43,3 +43,4 @@ if submit:
     st.write(
         f"Um Ihr aktuelles Gewicht zu halten, benötigen Sie ungefähr **{maintenance_calories:.0f} kcal/Tag**."
     )
+st. image("https://schweizerbrot.ch/blog/lebensmittelpyramide/wp-content/uploads/2020/09/kalorienbedarf-rechner.png", caption="Ernährungspyramide - Kalorienbedarf Rechner", use_column_width=True)

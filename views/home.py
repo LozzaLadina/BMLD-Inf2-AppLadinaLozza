@@ -10,7 +10,7 @@ Diese App wurde von folgenden Personen entwickelt:
 - Ladina Lozza (lozzalad@students.zhaw.ch)
 
 
-Die App berechnet den Kalorienbedarf basierend auf den folgenden Faktoren:
+Die App berechnet Ihren Kalorienbedarf basierend auf den folgenden Faktoren:
 - Alter
 - Geschlecht
 - Gewicht

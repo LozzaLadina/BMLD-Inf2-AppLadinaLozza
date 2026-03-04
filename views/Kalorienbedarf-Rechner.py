@@ -43,4 +43,3 @@ if submit:
     st.write(
         f"Um Ihr aktuelles Gewicht zu halten, benötigen Sie ungefähr **{maintenance_calories:.0f} kcal/Tag**."
     )
-st. image("https://freedesignfile.com/wp-content/uploads/825677-food-pyramid-a-guide-to-balanced-nutrition-png.", caption="Ernährungspyramide - Kalorienbedarf Rechner", use_column_width=True)

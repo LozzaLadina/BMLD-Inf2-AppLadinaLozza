@@ -3,7 +3,6 @@ import streamlit as st
 st.title("Kalorienbedarf Rechner")
 
 st.badge("Verstehen Sie Ihren Kalorienbedarf und treffen Sie informierte Entscheidungen für Ihre Gesundheit!", color="green")
-font-size: 24px; 
 
 """
 Diese App wurde von folgenden Personen entwickelt:

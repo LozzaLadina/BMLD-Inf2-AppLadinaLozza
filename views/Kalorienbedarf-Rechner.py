@@ -14,7 +14,7 @@ with st.form(key="calorie_form"):
         [
             "Sitzend (wenig oder keine Bewegung)",
             "Leicht aktiv (leichte Bewegung/Sport 1-3 Tage/Woche)",
-            "Mäßig aktiv (mäßige Bewegung/Sport 3-5 Tage/Woche)",
+            "Mässig aktiv (mässige Bewegung/Sport 3-5 Tage/Woche)",
             "Sehr aktiv (harte Bewegung/Sport 6-7 Tage/Woche)",
             "Extrem aktiv (sehr harte tägliche Bewegung oder körperliche Arbeit)"
         ],
@@ -33,7 +33,7 @@ if submit:
     factors = {
         "Sitzend (wenig oder keine Bewegung)": 1.2,
         "Leicht aktiv (leichte Bewegung/Sport 1-3 Tage/Woche)": 1.375,
-        "Mäßig aktiv (mäßige Bewegung/Sport 3-5 Tage/Woche)": 1.55,
+        "Mässig aktiv (mässige Bewegung/Sport 3-5 Tage/Woche)": 1.55,
         "Sehr aktiv (harte Bewegung/Sport 6-7 Tage/Woche)": 1.725,
         "Extrem aktiv (sehr harte tägliche Bewegung oder körperliche Arbeit)": 1.9,
     }
@@ -43,3 +43,11 @@ if submit:
     st.write(
         f"Um Ihr aktuelles Gewicht zu halten, benötigen Sie ungefähr **{maintenance_calories:.0f} kcal/Tag**."
     )
+    return {
+        "timestamp": datetime.now(pytz.timezone('Europe/Zurich')),  # Current swiss time
+        "age": age,
+        "gender": gender,
+        "weight": weight,
+        "height": height,
+        "activity": activity,
+    } 

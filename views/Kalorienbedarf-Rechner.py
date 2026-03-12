@@ -1,10 +1,11 @@
 import streamlit as st
+import pandas as pd
+from functions.Kalorienbedarf_Rechner import calculate_calorie_needs
 
-from datetime import datetime
-import pytz
+if "data_df" not in st.session_state:
+    st.session_state["data_df"] = pd.DataFrame()
 
 st.title("Kalorienbedarf Rechner")
-
 st.write("Ihr Rechner für den täglichen Kalorienbedarf.")
 
 with st.form(key="calorie_form"):
@@ -46,11 +47,19 @@ if submit:
     st.write(
         f"Um Ihr aktuelles Gewicht zu halten, benötigen Sie ungefähr **{maintenance_calories:.0f} kcal/Tag**."
     )
-    return {
-        "timestamp": datetime.now(pytz.timezone('Europe/Zurich')),  # Current swiss time
-        "age": age,
-        "gender": gender,
-        "weight": weight,
-        "height": height,
-        "activity": activity,
-    } 
+
+if submit:
+
+    result = calculate_calorie_needs(gender, age, weight, height, activity)
+
+    # In Tabelle speichern
+    st.session_state["data_df"] = pd.concat(
+        [st.session_state["data_df"], pd.DataFrame([result])],
+        ignore_index=True
+    )
+
+    st.write(f"Ihr Grundumsatz (BMR) beträgt **{result['bmr']:.0f} kcal/Tag**.")
+
+# Tabelle anzeigen
+st.subheader("Verlauf der Berechnungen")
+st.dataframe(st.session_state["data_df"])

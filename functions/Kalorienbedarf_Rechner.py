@@ -3,6 +3,9 @@ import pytz
 import pandas as pd
 import streamlit as st
 
+if "data_df" not in st.session_state:
+    st.session_state["data_df"] = pd.DataFrame()
+
 def calculate_calorie_needs(gender, age, weight, height, activity):
     # Grundumsatz (BMR) nach Mifflin-St. Jeor
     if gender == "Männlich":
@@ -17,4 +20,5 @@ def calculate_calorie_needs(gender, age, weight, height, activity):
         "weight": weight,
         "height": height,
         "activity": activity,
+        "bmr": bmr,
     } 

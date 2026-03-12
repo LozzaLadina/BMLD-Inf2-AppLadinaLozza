@@ -58,8 +58,6 @@ if submit:
         ignore_index=True
     )
 
-    st.write(f"Ihr Grundumsatz (BMR) beträgt **{result['bmr']:.0f} kcal/Tag**.")
-
 # Tabelle anzeigen
 st.subheader("Verlauf der Berechnungen")
 st.dataframe(st.session_state["data_df"])

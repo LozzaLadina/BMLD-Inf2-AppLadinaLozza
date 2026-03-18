@@ -16,3 +16,4 @@ Diese App wurde von folgenden Personen entwickelt:
 - Giuliana Cerullo (cerulgiu@students.zhaw.ch)
 - Ladina Lozza (lozzalad@students.zhaw.ch)
 """
+

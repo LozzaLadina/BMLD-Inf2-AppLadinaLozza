@@ -58,6 +58,11 @@ if submit:
         ignore_index=True
     )
 
+  # --- CODE UPDATE: save data to data manager ---
+    data_manager = DataManager()
+    data_manager.save_user_data(st.session_state['data_df'], 'data.csv')
+    # --- END OF CODE UPDATE ---
+
 # Tabelle anzeigen
 st.subheader("Verlauf der Berechnungen")
 st.dataframe(st.session_state["data_df"])
